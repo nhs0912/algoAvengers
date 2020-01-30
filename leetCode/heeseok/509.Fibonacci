@@ -1,0 +1,14 @@
+class Solution:
+    numList = [0, 1]
+
+    def fib(self, N: int) -> int:
+        if N == 0:
+            return 0
+        if N == 1:
+            return 1
+        if len(self.numList) >= N:
+            return self.numList[N - 1]
+
+        result = self.fib(N - 1) + self.fib(N - 2)
+        self.numList.append(result)
+        return result
