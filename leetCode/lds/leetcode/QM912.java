@@ -4,8 +4,6 @@ import java.util.Arrays;
 
 /**
  * Leet Code 912. Sort an Array
- *
- *
  */
 class QM912Solution {
 
@@ -67,7 +65,30 @@ class QM912Solution {
 
                     nowIdx = j;
                 } else {
-                    break;
+                    break; // break 쓰든지 while문으로 바꿔본다
+                }
+            }
+        }
+
+        return nums;
+    }
+
+    public int[] sortArrayByBubbleSort(int[] nums) {
+
+        /*
+        버블정렬
+         - 가장 단순하지만 느린 알고리즘
+         - 현재의 원소와 바로 다음 원소를 비교하면서 큰 값을 점점 뒤로 보냄
+         - n개의 숫자가 들어있는 배열이 있을 때, 집합의 크기를 1씩 줄이면서 정렬을 수행
+         */
+        int temp = 0;
+        for (int i = nums.length-1; i > 0; i--) {
+
+            for (int j = 0; j < i; j++) {
+                if(nums[j] > nums[j+1]) {
+                    temp = nums[j];
+                    nums[j] = nums[j+1];
+                    nums[j+1] = temp;
                 }
             }
         }
@@ -83,6 +104,6 @@ public class QM912 {
         int[] nums = {5,2,3,1};
         QM912Solution solution = new QM912Solution();
 
-        System.out.println("solution = " + Arrays.toString(solution.sortArrayByInsertionSort(nums)));
+        System.out.println("solution = " + Arrays.toString(solution.sortArrayByBubbleSort(nums)));
     }
 }
