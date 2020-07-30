@@ -139,7 +139,7 @@ new Vue({
             //monsterHealth가 0이하일때 팝업창('You won!') 띄우고 게임상태와 log 초기화
             if(this.monsterHealth <= 0) {
                 this.monsterHealth = 0;
-                if (confirm('You won! do you want play the new game?')) {
+                if (confirm('You won! do you wanna play the new game?')) {
                     this.startGame();
                     return true;
                 } else {
@@ -150,7 +150,7 @@ new Vue({
             //playerHealth가 0이하일때 팝업창('You lost!') 띄우고 게임상태와 log 초기화
             } else if (this.playerHealth <= 0) {
                 this.playerHealth = 0;
-                if (confirm('You lost! do you want play the new game?')) {
+                if (confirm('You lost! do you wanna play the new game?')) {
                     this.startGame();
                     return true;
                 } else {
