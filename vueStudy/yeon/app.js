@@ -142,7 +142,7 @@ new Vue({
          */
         checkWin : function(){
 
-            if(this.monsterHealth < 0){
+            if(this.monsterHealth <= 0){
                 //monsterHealth가 0이하일때 팝업창('You won! new Game?') 띄우고 게임상태 초기화
                 if(confirm('You won! new Game?')){
                     this.startGame();
@@ -150,7 +150,7 @@ new Vue({
                     this.gameIsRunning = false;
                 }
                 return true;
-            }else if(this.playerHealth < 0 ){
+            }else if(this.playerHealth <= 0 ){
                 //playerHealth가 0이하일때 팝업창('You lost! new Game?') 띄우고 게임상태 초기화
                 if(confirm('You lost! new Game?')){
                     this.startGame();
