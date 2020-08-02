@@ -21,7 +21,7 @@ class Solution {
                 return -1;
             }
         
-             point = point + ((nums.length-point)/2);
+             point = point + (point/2);
             
              return binarySearch(nums, target, point);
                 
