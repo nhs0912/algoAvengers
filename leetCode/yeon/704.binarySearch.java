@@ -16,7 +16,8 @@ class Solution {
                return point;
            }else if(target > nums[point]){
             
-            if(point == point + ((nums.length-point)/2)){
+            if(point == point + ((nums.length-point)/2)
+                || target < nums[point+1]){
                 return -1;
             }
         
@@ -25,7 +26,8 @@ class Solution {
              return binarySearch(nums, target, point);
                 
             }else{
-              if(point == (point/2)){
+              if(point == (point/2) 
+                  || target > nums[point-1]){
                   return -1;
               }
               point = point / 2;
