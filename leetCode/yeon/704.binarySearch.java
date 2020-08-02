@@ -16,7 +16,7 @@ class Solution {
                return point;
            }else if(target > nums[point]){
             
-            if(point == point + ((nums.length-point)/2)
+            if(point == point + (point/2)
                 || target < nums[point+1]){
                 return -1;
             }
